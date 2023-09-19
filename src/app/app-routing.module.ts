@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ComponentFixture } from '@angular/core/testing';
 
 const routes: Routes = [
   {
@@ -7,9 +8,13 @@ const routes: Routes = [
     loadChildren: () => import("./products/products.module").then( m => m.ProductsModule )
   },
   {
+    path: "signals",
+    loadChildren: () => import("./signals/signals.module").then( m => m.SignalsModule )
+  },
+  {
     path: "**",
     redirectTo: "products"
-  }
+  },
 ];
 
 @NgModule({
