@@ -10,7 +10,7 @@ export class UserInfoPageComponent implements OnInit {
 
   private usersServices = inject( UsersService );
   public userId = signal( 1 );
-  public currentUser = signal<User|undefined>( undefined );
+  public currentUser = signal<User | undefined>( undefined );
   public userWasFound = signal( true );
 
   public fullName = computed<string>( () => {
